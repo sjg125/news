@@ -24,20 +24,39 @@
 
     <div class="container mt-5">
       <h1>Weather and Forecast</h1>
-            <p1>
-            #<%= @current_temp and @current_weather %>
-            #<br>
-            <%= @todaysforecast %>
-            <br>
-            <%= @tomorrowsforecast %>
-            </p1>
+
+        <div> 
+                <br>
+            <h2>Current Weather:</h2>
+                <br>
+                    The current temperature and weather is <%= @current_temp %> degrees and <%= @current_weather %>
+                <br>
+                <br>
+            <h2> Weather Forecast over the Next Week:</h2>
+                <br>
+            <% for weather in @forecast["daily"]["data"]%>
+                 <div>
+                    The forecast for 
+                    <%= Time.at(weather["time"]).strftime("%a") %> 
+                    is a high temperature of 
+                    <%= weather["temperatureHigh"] %>
+                    and
+                    <%= weather["summary"] %>
+                 </div>
+            <% end %>
+        </div>   
     </div>
 
     <div class="container mt-5">
       <h1>News</h1>
-            <p1>
-            <%= %>
-            </p1>
+            <% for headlines in @news %>
+                 <div>
+                    The headlines for today are
+                    <%= headlines["title"] %>
+                    <%= headlines["description"] %>
+                    <%= headlines["link"] %>
+                 </div>
+            <% end %>
     </div>
 
     # <div class="row">

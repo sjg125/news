@@ -1,0 +1,65 @@
+body {
+    font-family: "Cambria", sans-serif;
+    color:black;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+h1, h2 {
+    font-family: "Cambria", sans-serif;
+    color: black;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border:1px solid black;
+}
+
+h3 {
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Rock Salt', cursive;
+    color:rgb(200, 40, 200);
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align:center;
+}
+
+img {
+    height:450px;
+}
+
+p {
+    text-align:center;
+    font-family:'Cambria', serif
+}
+
+.jumbotron {   
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.table {
+    margin-left:auto; 
+    margin-right:auto;
+    margin-left: 10px;
+}
+
+.form-group {
+    margin-left:auto; 
+    margin-right:auto;
+    margin-left: 10px;
+}
+
+.btn-primary {
+    color:rgb(50, 40, 200);
+    margin-left:auto; 
+    margin-right:auto;
+    margin-left: 10px;
+}
