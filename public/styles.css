@@ -1,9 +1,9 @@
-h1, {
-    font-family: "Cambria", sans-serif;
-    color: black;
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+h1 {
+    font-family: 'Alfa Slab One', cursive;
+    color: rgb(105, 255, 118);
+    font-size: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
     border:1px black;
@@ -12,28 +12,26 @@ h1, {
 h2 {
     font-family: "Cambria", sans-serif;
     color: black;
-    font-size: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
 h3 {
-    font-family: 'Alfa Slab One', cursive;
-    font-family: 'Rock Salt', cursive;
-    color:rgb(200, 40, 200);
-    font-size: 40px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    font-family: "Calibri", sans-serif;
+    color: blue;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    text-align:center;
-}
-}
-.btn-primary {
-    color:rgb(50, 40, 200);
-    margin-left:auto; 
-    margin-right:auto;
-    margin-left: 10px;
+
+p, {
+padding-bottom: 10px
 }

@@ -20,46 +20,75 @@
 
     <title>News</title>
   </head>
+
   <body>
 
+  <!--Title-->
+    <div class="page-header">
+        <p>
+            <div class="col-md-12">
+                <h4>Your Personalized Newsletter</h4>
+            </div>
+        </p>
+    </div>
+
+ <!--Go Back Button--->
+    <div class="col-md-12">
+        <p>  
+            <form>
+                <input type="button" value="Enter a different location" onclick="history.back()">
+                <br>
+            </form>
+        </p>
+    </div>
+
+<!--Section 1: Weather--->
     <div class="container mt-5">
-      <h1>Weather and Forecast</h1>
-        <div> 
-            <h2>Current Weather:</h2>
-                The current temperature and weather is <%= @current_temp %> degrees and <%= @current_weather %>
-                <br>
-                <br>
-            <h2>Weather Forecast over the Next Week:</h2>
-            <% for weather in @forecast["daily"]["data"]%>
-                 <div>
-                    The forecast for 
-                    <%= Time.at(weather["time"]).strftime("%a") %> 
-                    is a high temperature of 
-                    <%= weather["temperatureHigh"] %>
-                    and
-                    <%= weather["summary"] %>
-                 </div>
-            <% end %>
-        </div>   
+        <p>
+            <h1>Weather and Forecast for Your Location</h1>
+                <div> 
+                    <h2>Current Weather:</h2>
+                        The current temperature and weather is <%= @current_temp %> degrees and <%= @current_weather %>
+                    <br>
+                    <br>
+                    <h2>Weather Forecast over the Next Week:</h2>
+                    <% for weather in @forecast["daily"]["data"]%>
+                        <div>
+                            The forecast for 
+                            <%= Time.at(weather["time"]).strftime("%a") %> 
+                            is a high temperature of 
+                            <%= weather["temperatureHigh"] %>
+                            degrees and <%= weather["summary"] %>
+                        </div>
+                    <% end %>
+                </div> 
+        </p>  
     </div>
 
     <br>
 
+ <!--Section 2: News--->
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Latest Headlines</h1>
+        <p>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Latest Headlines Regardless of Your Location</h1>
+                </div>
+                <% for headlines in @news["articles"] %>
+                    <div class="col-md-6">
+                        <%= headlines["title"] %>
+                        <br>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>
+                            <a href= "<%= headlines["url"] %>"><%= headlines["url"] %></a>
+                        </h3>
+                        <br>
+                    </div>
+                    <br>
+                <% end %>
             </div>
-            <% for headlines in @news["articles"] %>
-                <div class="col-md-6">
-                    <%= headlines["title"] %>
-                </div>
-                <div class="col-md-6">
-                    <%= headlines["url"] %>
-                </div>
-                <br>
-            <% end %>
-        </div>
+        </p>
    </div>
 
     <!-- Optional JavaScript -->
